@@ -38,7 +38,7 @@ const registerUser=asyncHandler(async (req,res)=>{
     // }
 
     if(
-        [fullname,username,email,password].some((field)=> field?.trim()=== "" )  // agr field  haie("?") to usko trim kr dijye,trim krne ke bad v agr empty rhta h to automatically true return hoga.
+        [fullname,username,email,password].some((field)=> field?.trim() === "" )  // agr field  haie("?") to usko trim kr dijye,trim krne ke bad v agr empty rhta h to automatically true return hoga.
     ){
         throw new ApiError(400,"All fields are compulsory")
     }   
